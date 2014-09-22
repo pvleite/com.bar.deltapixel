@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Delta Pixel</string>
+    <string name="title_section1">Novo</string>
+    <string name="title_section2">Pedidos</string>
+    <string name="title_section3">Configuração</string>
+    <string name="navigation_drawer_open">Abrir navegação lateral</string>
+    <string name="navigation_drawer_close">Fechar navegação lateral</string>
+    <string name="action_example">Atualizar</string>
+    <string name="action_reload">Atualizar</string>
+    <string name="action_settings">Configurações</string>
+    <string name="title_activity_pdv">PDVActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="title_activity_splash">SplashActivity</string>
+    <string name="hello_world">Hello world!</string>
+
+</resources>
