@@ -18,7 +18,7 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 
 public class SplashActivity extends ActionBarActivity {
-	
+	ImageView logo, writtenlogo;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -28,27 +28,34 @@ public class SplashActivity extends ActionBarActivity {
 
         setContentView(R.layout.activity_splash);
         
-        final ImageView logo = (ImageView)findViewById(R.id.splashlogo);
+        logo = (ImageView)findViewById(R.id.splashlogo);
+        writtenlogo = (ImageView)findViewById(R.id.writtenlogo);
         
-        AnimatorSet set = (AnimatorSet) AnimatorInflater.loadAnimator(this,R.animator.flipping);
-					set.setDuration(1000);
-					set.setTarget(logo);
-					set.start();
-		ObjectAnimator scaleDown = ObjectAnimator.ofPropertyValuesHolder(logo, 
-			    PropertyValuesHolder.ofFloat("scaleX", 1.5f),
-			    PropertyValuesHolder.ofFloat("scaleY", 1.5f));
-			scaleDown.setDuration(1000);
-			scaleDown.start();
+        loadAnimation(logo);
         
-        int secondsDelayed = 3;
+        Handler handler = new Handler(); 
+        handler.postDelayed(new Runnable() { 
+             public void run() { 
+            	 loadAnimation(writtenlogo);
+             } 
+        }, 500);         
+        
+        /*int secondsDelayed = 3;
         new Handler().postDelayed(new Runnable() {
                 public void run() {
                         startActivity(new Intent(SplashActivity.this, MainActivity.class));
                         finish();
                 }
-        }, secondsDelayed * 1000);
+        }, secondsDelayed * 1000);*/
 	}
 
+	public void loadAnimation(ImageView img)
+	{
+		AnimatorSet set = (AnimatorSet) AnimatorInflater.loadAnimator(this,R.animator.flipping);
+		set.setTarget(img);
+		set.start();
+	}
+	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.

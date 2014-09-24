@@ -1,5 +1,4 @@
-<!-- A DrawerLayout is intended to be used as the top-level content view using match_parent for both width and height to consume the full space available. -->
-<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<!-- A DrawerLayout is intended to be used as the top-level content view using match_parent for both width and height to consume the full space available. --><android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
@@ -31,8 +30,7 @@
          The drawer is given a fixed width in dp and extends the full height of
          the container.
     -->
-
-    <fragment
+ 	<fragment
         android:id="@+id/navigation_drawer"
         android:name="com.bar.deltapixel.NavigationDrawerFragment"
         android:layout_width="@dimen/navigation_drawer_width"

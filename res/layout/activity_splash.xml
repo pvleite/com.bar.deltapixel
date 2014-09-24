@@ -1,21 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        android:orientation="vertical" android:layout_width="fill_parent"
-        android:layout_height="fill_parent">
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/splash"
+    android:orientation="vertical" >
+    
+	<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	    android:layout_width="fill_parent"
+    	android:layout_height="fill_parent">
+	    <ImageView
+	        android:id="@+id/splashlogo"
+	        android:layout_width="220dp"
+	        android:layout_height="220dp"
+	        android:layout_alignParentTop="true"
+	        android:layout_centerHorizontal="true"
+	        android:layout_marginTop="58dp"
+	        android:alpha="0"
+	        android:src="@drawable/ic_launcher" />
+	
+	    <ImageView
+	        android:id="@+id/writtenlogo"
+	        android:layout_width="200dp"
+	        android:layout_height="103dp"
+	        android:layout_centerHorizontal="true"
+	        android:layout_below="@+id/splashlogo"
+	        android:layout_marginTop="32dp"
+	        android:src="@drawable/written_logo"
+	        android:alpha="0"
+	        android:visibility="visible" />
+	</RelativeLayout>
 
-    <ImageView
-        android:id="@+id/splashscreen"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:contentDescription="splash-screen"
-        android:scaleType="fitXY"
-        android:src="@drawable/splash" />
-    
-    <ImageView
-        android:id="@+id/splashlogo"
-        android:src="@drawable/ic_launcher"
-        android:layout_width="124dp"
-        android:layout_height="124dp"
-        android:layout_centerInParent="true" />
-    
 </RelativeLayout>
